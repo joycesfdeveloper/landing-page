@@ -1,0 +1,104 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+      </nav>
+    </header>
+    <main>
+      <header class="main__hero">
+        <h1>The Best National Parks to Visit</h1>
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+      <section id="section1" data-nav="Biscayne" class="your-active-class">
+        <div class="landing__container">
+          <h2>Biscayne National Park</h2>
+          <img src="images\Elkhorn_Coral_Biscayne_NP1.jpg" alt="Biscayne" />
+          <p>
+            Biscayne National Park is a protected area on the Florida Keys, in
+            the state of Florida. The park is named after the sea creature
+            Biscayne, a fish found in the area.
+          </p>
+          <p>
+            The park is the only national park in the U.S. that is completely
+            within the Florida Keys.
+          </p>
+        </div>
+      </section>
+      <section id="section2" data-nav="Yellow Stone">
+        <div class="landing__container">
+          <h2>Yellow Stone National Park</h2>
+          <img src="images\james-lee-YellowStoneNP.jpg" alt="Yellowstone" />
+          <p>
+            Yellowstone was the first national park for all to enjoy the unique
+            hydrothermal and geologic features.
+          </p>
+          <p>Yellowstone is 2.2 million acres.</p>
+        </div>
+      </section>
+      <section id="section3" data-nav="Olympic">
+        <div class="landing__container">
+          <h2>Olympic National Park</h2>
+          <img src="images\james-wheeler-OlympicNP.jpg" alt="Olympic" />
+          <p>
+            Located in Washington State, Olympic National Park has natural
+            diversity.
+          </p>
+
+          <p>The park is 922,651 acres of protected rain forest.</p>
+        </div>
+      </section>
+      <section id="section4" data-nav="Bryce Canyon">
+        <div class="landing__container">
+          <h2>Bryce Canyon National Park</h2>
+          <img
+            src="images\lukas-kloeppel-BryceCanyonNP.jpg"
+            alt="Bryce Canyon"
+          />
+          <p>Bryce Canyon National Park is located in southern Utah.</p>
+
+          <p>
+            The park is well-known for crimson-colored, spire-shaped rock
+            formations called Hoodoos.
+          </p>
+        </div>
+      </section>
+      <section id="section5" data-nav="Arches">
+        <div class="landing__container">
+          <h2>Arches National Park</h2>
+          <img src="images\RayBaycliff-ArchesNP.jpg" alt="Arches" />
+          <p>Arches National Park is located in Eastern Utah.</p>
+
+          <p>
+            Located in the park
+            are more than 2,000 natural sandstone arches. 
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+    </footer>
+    <script defer src="js/app.js"></script>
+  </body>
+</html>
