@@ -27,8 +27,7 @@ const navList = document.querySelector("#navbar__list");
 const sections = document.querySelectorAll("section");
 const selected = document.querySelectorAll("section");
 
-// sections array
-let navListItems = sections.length;
+
 
 /**
  * End Global Variables
@@ -87,18 +86,11 @@ function showViewed(){
       s.classList.remove("your-active-class");
 }
 	});
-//show or hide the topBtn
-createTopBtn();
+
+
 }
 
-function createTopBtn(){
-	// hide the topBtn in the top of the page & show it in the rest of the page
-  if(document.documentElement.scrollTop > 400){
-    topBtn.style.display = "block";
-  }else{
-    topBtn.style.display = "none";
-  }
-}
+
 // scroll to the top of the page
 function moveToTop(){
   document.documentElement.scrollTop = 0;
@@ -114,7 +106,7 @@ function moveToTop(){
 // build the nav
 buildNav(sections);
 document.addEventListener("scroll", showViewed);
-topBtn.addEventListener("click", moveToTop);
+
 
 
 
